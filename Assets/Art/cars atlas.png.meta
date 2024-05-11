@@ -20,12 +20,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -43,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -64,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -77,7 +75,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -90,7 +87,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -103,7 +99,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -116,7 +111,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -129,12 +123,179 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cars atlas_19
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 2273
+        width: 854
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58df9b0149f695a41bf26875358a1a1e
+      internalID: 1313913907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_34
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2339
+        width: 321
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a779dbfd2256345bfefea6b4bee467
+      internalID: 1327551479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_38
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 2365
+        width: 299
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bf8302d1db2654c8c254ac318fd30a
+      internalID: 698866260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_74
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1405
+        width: 807
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c7cca46fbe9c247bd6b29864dd9803
+      internalID: -979002486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_98
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 562
+        width: 501
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a1c1eb4073d054a9a12e8ab09a6119
+      internalID: -187188992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_12
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1818
+        width: 333
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a15b1432eee92409cd816dc8cae6e7
+      internalID: -1371550929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_13
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1818
+        width: 333
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac840244dc9c804ba16e4be4cabad97
+      internalID: -1293276963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars atlas_14
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1818
+        width: 333
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf0b3d7a905eba42ba7e1dba2c7ffb6
+      internalID: -313388219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,9 +306,129 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
-  mipmapLimitGroupName: 
+    nameFileIdTable:
+      cars atlas_0: 1428885355
+      cars atlas_1: 1310546411
+      cars atlas_10: 1111674396
+      cars atlas_100: -243790693
+      cars atlas_101: 87900749
+      cars atlas_102: 1449514421
+      cars atlas_103: -1547028695
+      cars atlas_104: 12992499
+      cars atlas_105: -1679517931
+      cars atlas_106: -1424328066
+      cars atlas_107: 1866337533
+      cars atlas_108: 1500564449
+      cars atlas_109: -1820318385
+      cars atlas_11: -1025289976
+      cars atlas_110: -2010824073
+      cars atlas_111: 1621400546
+      cars atlas_112: -1636260889
+      cars atlas_113: 672410114
+      cars atlas_114: -1729718205
+      cars atlas_115: -423397251
+      cars atlas_116: -354618868
+      cars atlas_117: -1179391196
+      cars atlas_118: -2055829200
+      cars atlas_12: -1371550929
+      cars atlas_13: -1293276963
+      cars atlas_14: -313388219
+      cars atlas_15: -801157379
+      cars atlas_16: 1469930880
+      cars atlas_17: 1427089132
+      cars atlas_18: -1229869210
+      cars atlas_19: 1313913907
+      cars atlas_2: -1022436482
+      cars atlas_20: -1546528440
+      cars atlas_21: 311355581
+      cars atlas_22: 563888768
+      cars atlas_23: 1560071667
+      cars atlas_24: 971494680
+      cars atlas_25: -2012289051
+      cars atlas_26: 1849303227
+      cars atlas_27: -1560219855
+      cars atlas_28: -1049052918
+      cars atlas_29: 1499094926
+      cars atlas_3: -1206164158
+      cars atlas_30: -1917387723
+      cars atlas_31: 840581137
+      cars atlas_32: 961798934
+      cars atlas_33: 652569045
+      cars atlas_34: 1327551479
+      cars atlas_35: -1109055999
+      cars atlas_36: -2093852667
+      cars atlas_37: -2002813988
+      cars atlas_38: 698866260
+      cars atlas_39: 1819668354
+      cars atlas_4: 1318145482
+      cars atlas_40: -1274737651
+      cars atlas_41: -272974398
+      cars atlas_42: -142591057
+      cars atlas_43: -243699946
+      cars atlas_44: -872465029
+      cars atlas_45: -184854193
+      cars atlas_46: -2096773492
+      cars atlas_47: -1769905542
+      cars atlas_48: 1124039875
+      cars atlas_49: -530251765
+      cars atlas_5: -14081113
+      cars atlas_50: -635658385
+      cars atlas_51: 237419769
+      cars atlas_52: 158196368
+      cars atlas_53: -915740727
+      cars atlas_54: -151828136
+      cars atlas_55: 1239149350
+      cars atlas_56: 381429066
+      cars atlas_57: -1948117306
+      cars atlas_58: -785392408
+      cars atlas_59: 1862042638
+      cars atlas_6: -2065022882
+      cars atlas_60: 1515306481
+      cars atlas_61: 808359622
+      cars atlas_62: 539586855
+      cars atlas_63: 1113925674
+      cars atlas_64: 1270597519
+      cars atlas_65: -1703494307
+      cars atlas_66: 513544336
+      cars atlas_67: 33828001
+      cars atlas_68: -689761768
+      cars atlas_69: -662437171
+      cars atlas_7: 2062947520
+      cars atlas_70: -1841818524
+      cars atlas_71: 1814310996
+      cars atlas_72: -1631478261
+      cars atlas_73: 1992182206
+      cars atlas_74: -979002486
+      cars atlas_75: 2059200384
+      cars atlas_76: -1041537212
+      cars atlas_77: -774297773
+      cars atlas_78: -1456781891
+      cars atlas_79: 629739009
+      cars atlas_8: -1203214634
+      cars atlas_80: -582750343
+      cars atlas_81: 920785575
+      cars atlas_82: 1805411438
+      cars atlas_83: 990111488
+      cars atlas_84: 1380182991
+      cars atlas_85: 1215767219
+      cars atlas_86: -1846192552
+      cars atlas_87: 788804815
+      cars atlas_88: -1950919189
+      cars atlas_89: 1286402328
+      cars atlas_9: -1432943546
+      cars atlas_90: -711333962
+      cars atlas_91: 469592564
+      cars atlas_92: 87891151
+      cars atlas_93: 1109468773
+      cars atlas_94: -1981467778
+      cars atlas_95: -1012291907
+      cars atlas_96: 665365438
+      cars atlas_97: 1667662708
+      cars atlas_98: -187188992
+      cars atlas_99: 1493538622
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

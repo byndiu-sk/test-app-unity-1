@@ -20,12 +20,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -43,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -64,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -77,7 +75,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -90,7 +87,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -103,7 +99,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -116,7 +111,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -129,12 +123,95 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: paused atlas_10
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 254
+        width: 1453
+        height: 1139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12e7e53dc67a334da3a34764e27b23f
+      internalID: -611023388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paused atlas_12
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1221
+        width: 171
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e107815eb4e9cb144bb4e1bd3c7c8e7c
+      internalID: -1724413446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paused atlas_22
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 758
+        width: 787
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fdfbfdebf0bf74486fe8442350962f
+      internalID: -1661859705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paused atlas_29
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 263
+        width: 592
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2959f6918ef703246a6752523b330675
+      internalID: 1134192575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,9 +222,50 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
-  mipmapLimitGroupName: 
+    nameFileIdTable:
+      paused atlas_0: -942037077
+      paused atlas_1: -172744123
+      paused atlas_10: -611023388
+      paused atlas_11: -1833225436
+      paused atlas_12: -1724413446
+      paused atlas_13: 279412367
+      paused atlas_14: 1776644415
+      paused atlas_15: 49718292
+      paused atlas_16: 1004774493
+      paused atlas_17: 876725818
+      paused atlas_18: 1023195690
+      paused atlas_19: 1035280203
+      paused atlas_2: -1350517149
+      paused atlas_20: 386789855
+      paused atlas_21: -73393484
+      paused atlas_22: -1661859705
+      paused atlas_23: 1005320047
+      paused atlas_24: -111838301
+      paused atlas_25: -1335912158
+      paused atlas_26: -505571392
+      paused atlas_27: -1604182115
+      paused atlas_28: 1039803180
+      paused atlas_29: 1134192575
+      paused atlas_3: -1358281227
+      paused atlas_30: 803170191
+      paused atlas_31: 977266166
+      paused atlas_32: 386501431
+      paused atlas_33: -1813929348
+      paused atlas_34: -1980782720
+      paused atlas_35: 707661796
+      paused atlas_36: 1726649288
+      paused atlas_37: 1516927870
+      paused atlas_38: -385013968
+      paused atlas_39: -965385682
+      paused atlas_4: -212847646
+      paused atlas_5: -1372730910
+      paused atlas_6: -300363335
+      paused atlas_7: 519792013
+      paused atlas_8: -1745608625
+      paused atlas_9: -27121354
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
