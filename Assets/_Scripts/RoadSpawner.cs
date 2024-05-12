@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class RoadSpawner : MonoBehaviour
 {
-    public GameObject roadSegmentPrefab; // This is the prefab for a road segment
+    public List<GameObject> roadSegmentPrefabs; // This is the list of prefabs for road segments
     public int numberOfSegments; // The number of road segments you want to spawn
-    public float spawnY; // The Z-coordinate where the first segment of the road is spawned
+    public float spawnY; // The Y-coordinate where the first segment of the road is spawned
     public float segmentLength; // The length of a road segment
 
     private List<GameObject> roadSegments = new List<GameObject>(); // This list holds all the road segments
@@ -22,9 +22,9 @@ public class RoadSpawner : MonoBehaviour
     // This function is used to spawn a road segment
     private void SpawnRoadSegment()
     {
-        GameObject segment = Instantiate(roadSegmentPrefab);
+        GameObject segment = Instantiate(roadSegmentPrefabs[Random.Range(0, roadSegmentPrefabs.Count)]);
         segment.transform.SetParent(transform);
-        segment.transform.position = Vector2.up * spawnY;
+        segment.transform.position = new Vector3(0, spawnY, 0);
         spawnY += segmentLength;
 
         roadSegments.Add(segment);
