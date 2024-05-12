@@ -1037,7 +1037,7 @@ RectTransform:
   m_Children:
   - {fileID: 1706154866}
   m_Father: {fileID: 729454962}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1560,6 +1560,7 @@ GameObject:
   - component: {fileID: 484738370}
   - component: {fileID: 484738369}
   - component: {fileID: 484738368}
+  - component: {fileID: 484738371}
   m_Layer: 5
   m_Name: Gas
   m_TagString: Untagged
@@ -1574,7 +1575,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484738366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1669,6 +1670,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484738366}
   m_CullTransparentMesh: 1
+--- !u!114 &484738371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484738366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c7b252d671ccf478c84a87683a3052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &568787790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2230,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 980157123}
   - {fileID: 1712256738}
   - {fileID: 1594050392}
   - {fileID: 1423256544}
@@ -2224,7 +2238,6 @@ RectTransform:
   - {fileID: 442682615}
   - {fileID: 2010806049}
   - {fileID: 1497052909}
-  - {fileID: 980157123}
   m_Father: {fileID: 1113066797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2684,7 +2697,7 @@ RectTransform:
   - {fileID: 484738367}
   - {fileID: 2143812760}
   m_Father: {fileID: 729454962}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2981,7 +2994,7 @@ RectTransform:
   - {fileID: 716797278}
   - {fileID: 442697504}
   m_Father: {fileID: 729454962}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3111,6 +3124,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1113469851}
   - component: {fileID: 1113469853}
+  - component: {fileID: 1113469855}
+  - component: {fileID: 1113469854}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -3173,7 +3188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e4d6991eabb98a2408ebcb0c5150e98d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3185,6 +3200,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1113469854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113469850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe093f8e3610124788d8e3fd236ae34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI_Element: {fileID: 1167303069}
+  maximumSteeringAngle: 200
+  wheelReleasedSpeed: 200
+--- !u!114 &1113469855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113469850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d703b98bca478c5458277c03aef3f8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetLimit: 16
+  borderLimit: 5
+  BreakPedal: {fileID: 2143812764}
+  GasPedal: {fileID: 484738371}
+  SteeringWheel: {fileID: 1113469854}
+  speed: 10
+  acceleration: 5
+  rotationSpeed: 10
+  offset: 0
 --- !u!1 &1130479135
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,7 +3384,6 @@ GameObject:
   - component: {fileID: 1167303068}
   - component: {fileID: 1167303070}
   - component: {fileID: 1167303069}
-  - component: {fileID: 1167303071}
   m_Layer: 5
   m_Name: Wheel
   m_TagString: Untagged
@@ -3399,21 +3449,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167303067}
   m_CullTransparentMesh: 1
---- !u!114 &1167303071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167303067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe093f8e3610124788d8e3fd236ae34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UI_Element: {fileID: 1167303069}
-  maximumSteeringAngle: 200
-  wheelReleasedSpeed: 200
 --- !u!1 &1202365729
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,7 +4179,7 @@ RectTransform:
   - {fileID: 571680948}
   - {fileID: 1130479136}
   m_Father: {fileID: 729454962}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4332,7 +4367,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 729454962}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4445,7 +4480,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1505310441}
-  - component: {fileID: 1505310442}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4469,20 +4503,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1505310442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505310440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d703b98bca478c5458277c03aef3f8b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rotationSpeed: 50
 --- !u!1 &1519888544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,7 +4709,7 @@ RectTransform:
   - {fileID: 568787791}
   - {fileID: 445310493}
   m_Father: {fileID: 729454962}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5130,7 +5150,7 @@ RectTransform:
   - {fileID: 701026061}
   - {fileID: 318042286}
   m_Father: {fileID: 729454962}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5617,6 +5637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1113469851}
+  CarController: {fileID: 1113469855}
 --- !u!1 &2010806048
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,7 +5669,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 729454962}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5846,6 +5867,7 @@ GameObject:
   - component: {fileID: 2143812763}
   - component: {fileID: 2143812762}
   - component: {fileID: 2143812761}
+  - component: {fileID: 2143812764}
   m_Layer: 5
   m_Name: Break
   m_TagString: Untagged
@@ -5955,6 +5977,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143812759}
   m_CullTransparentMesh: 1
+--- !u!114 &2143812764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143812759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4c9925132204a44ad4a39097524147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5787249817450431513
 PrefabInstance:
   m_ObjectHideFlags: 0
