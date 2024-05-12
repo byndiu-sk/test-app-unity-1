@@ -3126,6 +3126,7 @@ GameObject:
   - component: {fileID: 1113469853}
   - component: {fileID: 1113469855}
   - component: {fileID: 1113469854}
+  - component: {fileID: 1113469856}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -3236,6 +3237,32 @@ MonoBehaviour:
   acceleration: 5
   rotationSpeed: 10
   offset: 0
+--- !u!61 &1113469856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113469850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.28, y: 4.02}
+    newSize: {x: 3.28, y: 4.02}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.28, y: 4.02}
+  m_EdgeRadius: 0
 --- !u!1 &1130479135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4481,6 +4508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505310441}
   - component: {fileID: 1505310442}
+  - component: {fileID: 1505310443}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4517,6 +4545,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startHealth: 100
+--- !u!114 &1505310443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505310440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa6f21e82d728e44ad2536a07b8dce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1519888544
 GameObject:
   m_ObjectHideFlags: 0
