@@ -4480,6 +4480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1505310441}
+  - component: {fileID: 1505310442}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4503,6 +4504,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505310442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505310440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd16d6b1c905f44b81a8c5c8beaacc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startHealth: 100
 --- !u!1 &1519888544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5127,6 +5141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1712256738}
   - component: {fileID: 1712256739}
+  - component: {fileID: 1712256740}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -5165,6 +5180,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712256737}
   m_CullTransparentMesh: 1
+--- !u!114 &1712256740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712256737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7713d9e51fc736c4bba88b6857b5790f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthSystem: {fileID: 1505310442}
+  _fill: {fileID: 701026062}
 --- !u!1 &1816374537
 GameObject:
   m_ObjectHideFlags: 0
