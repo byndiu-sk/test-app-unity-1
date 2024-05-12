@@ -40,6 +40,11 @@ public class GameManager : MonoBehaviour
     {
         OnGameStart?.Invoke();
     }
+
+    public void RestartGame()
+    {
+        print("game restarted");
+    }
     
     public void EndGame()
     {
