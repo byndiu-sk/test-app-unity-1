@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     {
         await _uiController.GameScreen.PlayCountdownAsync();
         LaunchGame();
-        SpawnPoliceCar();
+     //   SpawnPoliceCar();
         print("countdown completed");
     }
     

@@ -14,9 +14,9 @@ public class HealthBar : MonoBehaviour
         _healthSystem.OnDamaged += OnDamaged;
     }
 
-    private void OnDamaged(object sender, int e)
+    private void OnDamaged(object sender, float e)
     {
-        float healthPercentage = (float)e / _healthSystem.StartHealth;
+        float healthPercentage = e / _healthSystem.StartHealth;
         _fill.fillAmount = healthPercentage;
     }
 }

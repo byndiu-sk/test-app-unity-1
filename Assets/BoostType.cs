@@ -2,5 +2,6 @@
 {
     Magnet,
     Shield,
-    Nitro
+    Nitro,
+    Health
 }

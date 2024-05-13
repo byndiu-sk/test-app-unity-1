@@ -12,6 +12,9 @@ public class BoostController : MonoBehaviour
         _boosts.ForEach(b => b.gameObject.SetActive(false));
         
         var boost = _boosts.Find(b => b.Type == type);
-        boost.gameObject.SetActive(true);
+        if (boost != null)
+            boost.gameObject.SetActive(true);
     }
+    
+    
 }

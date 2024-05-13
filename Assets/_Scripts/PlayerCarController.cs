@@ -10,6 +10,7 @@ public class PlayerCarController : MonoBehaviour
     public GasPedal GasPedal;
     public SteeringWheel SteeringWheel;
     public float speed = 10f;
+    public float speedAffector;
     public float acceleration;
     public float rotationSpeed = 50f;
     private Vector3 position;
@@ -49,5 +50,7 @@ public class PlayerCarController : MonoBehaviour
         {
             speed = baseSpeed;
         }
+
+        speed += speedAffector;
     }
 }

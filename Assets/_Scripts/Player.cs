@@ -32,17 +32,37 @@ public class Player : MonoBehaviour
         if (obstacle != null)
         {
             _healthSystem.Damage(obstacle.HitDamage);
+            StartCoroutine(SlowDownPlayer(obstacle));
         }
 
         if (boostItem != null)
         {
             boostItem.Pickup();
             _boostController.SetActiveBoost(boostItem.Type);
+            ActivateItem(boostItem);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+
+    private void ActivateItem(BoostItem item)
     {
-        print("on collision");
+        switch (item.Type)
+        {
+            case BoostType.Health:
+                ActivateHealthItem(item as HealthItem);
+                break;
+        }
+    }
+
+    private void ActivateHealthItem(HealthItem item)
+    {
+        _healthSystem.Heal(item.HP);
+    }
+
+    public IEnumerator SlowDownPlayer(Obstacle obstacle)
+    {
+        _playerCar.speedAffector -= obstacle.Deceleration;
+        yield return new WaitForSeconds(10);
+        _playerCar.speedAffector += obstacle.Deceleration;
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 26269073935213752}
   - component: {fileID: 1375836450510110018}
   - component: {fileID: 4583342370644518837}
-  - component: {fileID: 1326217491921997483}
+  - component: {fileID: 8668384604153522145}
   m_Layer: 0
   m_Name: Pit3
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.780866, y: 3.6216054}
   m_EdgeRadius: 0
---- !u!114 &1326217491921997483
+--- !u!114 &8668384604153522145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8403848322674898363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b626e6e2db5d784faf2578e2409823b, type: 3}
+  m_Script: {fileID: 11500000, guid: 505e34d40fdb4a044bb6f5ed4fd3bd5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hitDamage: 0
+  _hitDamage: 10
+  _deceleration: 0.1

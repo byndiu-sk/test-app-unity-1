@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private int _startHealth;
+    [SerializeField] private float _startHealth;
     
-    private int _currentHealth;
+    private float _currentHealth;
     
-    public int StartHealth
+    public float StartHealth
     {
         get => _startHealth;
     }
 
-    public EventHandler<int> OnDamaged;
+    public EventHandler<float> OnDamaged;
     public Action OnCrashed;
 
     private void Start()
@@ -35,7 +35,7 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public void Damage(int damageAmount)
+    public void Damage(float damageAmount)
     {
         _currentHealth -= damageAmount;
         
@@ -51,12 +51,13 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public void Heal(int healAmount)
+    public void Heal(float healAmount)
     {
         _currentHealth += healAmount;
+        OnDamaged?.Invoke(this, _currentHealth);
     }
 
-    public int GetHealth()
+    public float GetHealth()
     {
         return _currentHealth;
     }
