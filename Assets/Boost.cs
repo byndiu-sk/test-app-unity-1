@@ -8,4 +8,9 @@ public class Boost : MonoBehaviour
     [SerializeField] private BoostType _type;
 
     public BoostType Type => _type;
+
+    public void Pickup()
+    {
+        gameObject.SetActive(false);
+    }
 }

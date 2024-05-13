@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1620485805106913346}
   - component: {fileID: 9114048836706523305}
-  - component: {fileID: 698219061839223350}
   - component: {fileID: 8087700096997958908}
+  - component: {fileID: 3010490992318925796}
   m_Layer: 0
   m_Name: HearthItem
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -769197264, guid: 60b18b6361c3d1c44aa3d730da0f3119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &698219061839223350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3246077639262070474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69b5c6e0ba3a4ab40aeceb54005a3add, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _type: 3
-  _hp: 20
 --- !u!61 &8087700096997958908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6903714, y: 1.7099999}
   m_EdgeRadius: 0
+--- !u!114 &3010490992318925796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3246077639262070474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d225946d342a345ace95d8ecfbb743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 3

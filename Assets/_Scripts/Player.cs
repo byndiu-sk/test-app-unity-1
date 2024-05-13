@@ -8,8 +8,11 @@ public class Player : MonoBehaviour
     private HealthSystem _healthSystem;
     private BoostController _boostController;
     private PlayerCarController _playerCar;
+    private Coroutine _activeBoostRoutine;
 
     public PlayerCarController PlayerCar => _playerCar;
+    public HealthSystem HealthSystem => _healthSystem;
+    
 
     private void Awake()
     {
@@ -27,7 +30,7 @@ public class Player : MonoBehaviour
     {
         print("triggered");
         Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
-        BoostItem boostItem = other.gameObject.GetComponent<BoostItem>();
+        Boost boostItem = other.gameObject.GetComponent<Boost>();
 
         if (obstacle != null)
         {
@@ -37,27 +40,17 @@ public class Player : MonoBehaviour
 
         if (boostItem != null)
         {
-            boostItem.Pickup();
-            _boostController.SetActiveBoost(boostItem.Type);
             ActivateItem(boostItem);
         }
     }
 
 
-    private void ActivateItem(BoostItem item)
+    private void ActivateItem(Boost item)
     {
-        switch (item.Type)
-        {
-            case BoostType.Health:
-                ActivateHealthItem(item as HealthItem);
-                break;
-        }
+        item.Pickup();
+        _boostController.ActivateBoost(item);
     }
-
-    private void ActivateHealthItem(HealthItem item)
-    {
-        _healthSystem.Heal(item.HP);
-    }
+    
 
     public IEnumerator SlowDownPlayer(Obstacle obstacle)
     {

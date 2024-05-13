@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3537748685086863649}
   - component: {fileID: 3537748685086863648}
-  - component: {fileID: 102355742221191955}
   - component: {fileID: -1905457341122091019}
+  - component: {fileID: 4616609781430628988}
   m_Layer: 0
   m_Name: NitroItem
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1070556009, guid: 60b18b6361c3d1c44aa3d730da0f3119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &102355742221191955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3537748685086863651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51e0402b1c99bfb4bbf9edf1228d1351, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _type: 2
 --- !u!61 &-1905457341122091019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1304681, y: 2.3899999}
   m_EdgeRadius: 0
+--- !u!114 &4616609781430628988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537748685086863651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d9ec18317fc0747bd795efc46ea4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 2

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,8 +9,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Police _police;
     
-    
     public static GameController Instance { get; private set; }
+    
+    public Player Player => _player;
 
     public Action OnGameStart;
     public Action OnGameFinish;

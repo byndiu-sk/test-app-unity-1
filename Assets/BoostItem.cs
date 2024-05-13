@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoostItem : MonoBehaviour
+public abstract class BoostItem : MonoBehaviour
 {
     [SerializeField] private BoostType _type;
     
