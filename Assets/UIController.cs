@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] private GameScreen _gameScreen;
+    [SerializeField] private List<Screen> _gameScreen;
 
-    public GameScreen GameScreen
+    public T GetScreenOfType<T>() where T : Screen
     {
-        get => _gameScreen;
+        return _gameScreen.OfType<T>().FirstOrDefault();
     }
 }

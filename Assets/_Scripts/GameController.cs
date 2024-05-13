@@ -1,15 +1,24 @@
 using System;
+using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] private UIController _uiController;
     [SerializeField] private Player _player;
     [SerializeField] private Police _police;
+    [SerializeField] private ScoreManager _scoreManager;
+
+    private bool _isGameRunning;
     
     public static GameController Instance { get; private set; }
+
+    public bool IsGameRunning => _isGameRunning;
+    public ScoreManager ScoreManager => _scoreManager;
+    public UIController UIController => _uiController;
     
     public Player Player => _player;
 
@@ -18,26 +27,19 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
     
     public async void InitializeGame()
     {
-        await _uiController.GameScreen.PlayCountdownAsync();
+        await _uiController.GetScreenOfType<GameScreen>().PlayCountdownAsync();
         LaunchGame();
-     //   SpawnPoliceCar();
+        
+        _isGameRunning = true;
         print("countdown completed");
     }
     
-    private  void Start()
+    private  void OnEnable()
     {
         InitializeGame();
     }
@@ -52,14 +54,27 @@ public class GameController : MonoBehaviour
     {
         OnGameStart?.Invoke();
     }
-
-    public void RestartGame()
-    {
-        print("game restarted");
-    }
     
     public void EndGame()
     {
+        _isGameRunning = false;
+        _uiController.GetScreenOfType<GameoverScreen>().Open();
         OnGameFinish?.Invoke();
+    }
+    
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void Reset()
+    {
+        
     }
 }

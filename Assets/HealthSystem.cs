@@ -47,6 +47,7 @@ public class HealthSystem : MonoBehaviour
             _currentHealth = 0;
             
             OnCrashed?.Invoke();
+            GameController.Instance.EndGame();
             print("car was crashed");
         }
     }

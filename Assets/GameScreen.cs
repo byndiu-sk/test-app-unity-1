@@ -1,14 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
-public class GameScreen : MonoBehaviour
+public class GameScreen : Screen
 {
+    [SerializeField] private GameObject _hud;
     [SerializeField] private TextMeshProUGUI _countdownText;
-    
+    [SerializeField] private Button _pauseButton;
+
+    private void Awake()
+    {
+        _pauseButton.onClick.AddListener(() => 
+            GameController.Instance.UIController.GetScreenOfType<PausePopup>().Open());
+    }
+
     public async Task PlayCountdownAsync()
     {
         int count = 3;
@@ -19,12 +30,15 @@ public class GameScreen : MonoBehaviour
             count--;
         }
         _countdownText.text = "START";
-        StartCoroutine(DisableTextAfterDelay(1));
+      StartCoroutine(EnableGameHud(1));
     }
     
-    private IEnumerator DisableTextAfterDelay(float delay)
+    private IEnumerator EnableGameHud(float delay)
     {
+        _hud.SetActive(true);
         yield return new WaitForSeconds(delay);
         _countdownText.gameObject.SetActive(false); 
     }
+    
+    
 }

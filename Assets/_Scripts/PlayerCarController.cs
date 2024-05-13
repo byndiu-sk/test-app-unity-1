@@ -27,30 +27,32 @@ public class PlayerCarController : MonoBehaviour
 
     private void Update()
     {
-        
+        if (GameController.Instance.IsGameRunning)
+        {
             position.y += speed * Time.deltaTime;
-        
 
-        horizontalInput = SteeringWheel.GetClampedValue();
-        position.x += horizontalInput * rotationSpeed * Time.deltaTime;
 
-        transform.position = position;
+            horizontalInput = SteeringWheel.GetClampedValue();
+            position.x += horizontalInput * rotationSpeed * Time.deltaTime;
 
-        if (GasPedal.IsPressed && offset <= offsetLimit)
-        {
-            speed = baseSpeed + acceleration;
-            offset += acceleration * Time.deltaTime;
+            transform.position = position;
+
+            if (GasPedal.IsPressed && offset <= offsetLimit)
+            {
+                speed = baseSpeed + acceleration;
+                offset += acceleration * Time.deltaTime;
+            }
+            else if (BreakPedal.IsPressed && offset >= -offsetLimit)
+            {
+                speed = baseSpeed - acceleration;
+                offset -= acceleration * Time.deltaTime;
+            }
+            else
+            {
+                speed = baseSpeed;
+            }
+
+            speed += speedAffector;
         }
-        else if (BreakPedal.IsPressed &&  offset >= -offsetLimit)
-        {
-            speed = baseSpeed - acceleration;
-            offset -= acceleration * Time.deltaTime;
-        }
-        else
-        {
-            speed = baseSpeed;
-        }
-
-        speed += speedAffector;
     }
 }

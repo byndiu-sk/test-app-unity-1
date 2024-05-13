@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,30 +6,45 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private const string SCORE_KEY = "score_key"; 
-    
+    private const string SCORE_KEY = "score_key";
+
+    [SerializeField] private float scoreModifier;
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _scoreTitleText;
+    [SerializeField] private Color _regularColor;
+    [SerializeField] private Color _nitroModifierColor;
+    
     private float _score = 0;
-    private float _highScore = 0;
-    private bool _isRunning = false;
+    private bool _isNitroModifierActive;
 
     private void Update()
     {
-        if (!_isRunning) return;
-
-        _score += Time.deltaTime;
-        UpdateScoreText();
+        if (GameController.Instance.IsGameRunning)
+        {
+            _score += Time.deltaTime * scoreModifier;
+            UpdateScoreText();
+        }
     }
 
-    public void StartScore()
+    public void TurnNitroModifier()
     {
-        _isRunning = true;
-    }
+        _isNitroModifierActive = !_isNitroModifierActive;
 
-    public void StopScore()
-    {
-        _isRunning = false;
-        SaveIfHighScore();
+        if (_isNitroModifierActive)
+        {
+            _scoreText.color = _nitroModifierColor;
+            _scoreTitleText.color = _nitroModifierColor;
+
+            scoreModifier *= 2;
+        }
+        else
+        {
+            _scoreText.color = _regularColor;
+            _scoreTitleText.color = _regularColor;
+
+            scoreModifier /= 2;
+        }
+        
     }
 
     public void ResetScore()
@@ -41,22 +57,27 @@ public class ScoreManager : MonoBehaviour
         return _score;
     }
 
-    private void UpdateScoreText()
+    public float HighScore()
     {
-        _scoreText.text = $"Score: {(int)_score}";
+        return LoadHighScore();
     }
 
-    private void SaveIfHighScore()
+    private void UpdateScoreText()
     {
-        if (_score > _highScore)
+        _scoreText.text = $"{(int)_score}";
+    }
+
+    public void SaveScore()
+    {
+        if (_score > LoadHighScore())
         {
-            
+            PlayerPrefs.SetFloat(SCORE_KEY ,_score);
         }
     }
 
-    private void LoadHighScore()
+    private float LoadHighScore()
     {
-        
+        return PlayerPrefs.GetFloat(SCORE_KEY);
     }
 
 }
