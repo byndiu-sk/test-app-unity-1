@@ -5,7 +5,8 @@ public abstract class TemporaryBoostItem : BoostItem
     [SerializeField] private float _duration;
     [SerializeField] protected Bar _bar;
 
-    private float _timer = 0f; 
+    private float _timer = 0f;
+    private bool _isActive = false;
     
     public float Duration => _duration;
     
@@ -21,12 +22,14 @@ public abstract class TemporaryBoostItem : BoostItem
     
     public virtual void Apply(Player player)
     {
+        _isActive = true;
         _timer = Duration;
         _bar.gameObject.SetActive(true);
     }
 
     public virtual void Cancel(Player player)
     {
+        _isActive = false;
         _bar.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
