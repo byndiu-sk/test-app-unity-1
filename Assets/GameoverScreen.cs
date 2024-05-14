@@ -1,12 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameoverScreen : Screen
 {
+    [SerializeField] private Button _restartButton;
+    [SerializeField] private Button _exitButton;
     [SerializeField] private TextMeshProUGUI _bestScoreText;
     [SerializeField] private TextMeshProUGUI _yourScoreText;
+
+    private void Awake()
+    {
+        _restartButton.onClick.AddListener(() =>
+        {
+            StopAllCoroutines();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+        
+        _exitButton.onClick.AddListener(Application.Quit);
+    }
 
     public override void Open()
     {

@@ -14,7 +14,7 @@ public class CameraFollower : MonoBehaviour
     {
         var currentPosition = gameObject.transform.position;
 
-        var newPosition = new Vector3(currentPosition.x, target.position.y - playerCarController.offset, currentPosition.z);
+        var newPosition = new Vector3(currentPosition.x, target.position.y - playerCarController.Offset, currentPosition.z);
         transform.position = newPosition;
     }
 }

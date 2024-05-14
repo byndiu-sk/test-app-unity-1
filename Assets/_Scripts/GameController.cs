@@ -1,10 +1,5 @@
 using System;
-using System.Collections;
-using System.ComponentModel;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class GameController : MonoBehaviour
 {
@@ -33,6 +28,7 @@ public class GameController : MonoBehaviour
     
     public async void InitializeGame()
     {
+        ResumeGame();
         await _uiController.GetScreenOfType<GameScreen>().PlayCountdownAsync();
         LaunchGame();
         
@@ -62,6 +58,7 @@ public class GameController : MonoBehaviour
         _isGameRunning = false;
         _uiController.GetScreenOfType<GameoverScreen>().Open();
         OnGameFinish?.Invoke();
+        PauseGame();
     }
     
 

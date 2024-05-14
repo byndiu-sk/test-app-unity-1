@@ -10,14 +10,14 @@ public class NitroItem : TemporaryBoostItem
     public override void Apply(Player player)
     {
         base.Apply(player);
-        player.PlayerCar.speedAffector += Acceleration;
+        player.PlayerCar.SpeedEffector += Acceleration;
         GameController.Instance.ScoreManager.TurnNitroModifier();
     }
 
     public override void Cancel(Player player)
     {
         GameController.Instance.ScoreManager.TurnNitroModifier();
-        player.PlayerCar.speedAffector -= Acceleration;
+        player.PlayerCar.SpeedEffector -= Acceleration;
         base.Cancel(player);
     }
 }

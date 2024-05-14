@@ -17,7 +17,7 @@ public class PausePopup : Screen
       {
          StopAllCoroutines();
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-         GameController.Instance.InitializeGame();
+         //GameController.Instance.InitializeGame();
         
       });
       _closeButotn.onClick.AddListener(() => Close());

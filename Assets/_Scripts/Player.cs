@@ -13,15 +13,11 @@ public class Player : MonoBehaviour
     public PlayerCarController PlayerCar => _playerCar;
     public HealthSystem HealthSystem => _healthSystem;
 
-
-    private ShieldBoostItem _shield;
-
     private void Awake()
     {
         _healthSystem = GetComponent<HealthSystem>();
         _boostController = GetComponent<BoostController>();
         _playerCar = GetComponentInChildren<PlayerCarController>();
-        _shield = GetComponentInChildren<ShieldBoostItem>();
     }
 
     private void Start()
@@ -48,6 +44,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        ShieldBoostItem shield = GetComponentInChildren<ShieldBoostItem>();
+        if (shield == null)
+            GameController.Instance.EndGame();
+        else
+        {
+            var police = other.gameObject.GetComponent<PoliceCarController>();
+            police.StopRunning();
+        }
+    }
+
 
     private void ActivateItem(Boost item)
     {
@@ -58,8 +66,8 @@ public class Player : MonoBehaviour
 
     public IEnumerator SlowDownPlayer(Obstacle obstacle)
     {
-        _playerCar.speedAffector -= obstacle.Deceleration;
+        _playerCar.SpeedEffector -= obstacle.Deceleration;
         yield return new WaitForSeconds(10);
-        _playerCar.speedAffector += obstacle.Deceleration;
+        _playerCar.SpeedEffector += obstacle.Deceleration;
     }
 }

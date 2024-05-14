@@ -1,30 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerCarController : MonoBehaviour
 {
-    public float offsetLimit = 16f;
-    public float borderLimit = 5;
-    public BreakPedal BreakPedal;
-    public GasPedal GasPedal;
-    public SteeringWheel SteeringWheel;
-    public float speed = 10f;
-    public float speedAffector;
-    public float acceleration;
-    public float rotationSpeed = 50f;
+    [SerializeField] private float offsetLimit = 16f;
+    [SerializeField] private float borderLimit = 5;
+    [SerializeField] private BreakPedal BreakPedal;
+    [SerializeField] private GasPedal GasPedal;
+    [SerializeField] private SteeringWheel SteeringWheel;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float rotationSpeed = 50f;
+    
     private Vector3 position;
     private float horizontalInput;
-
-    public float offset = 0;
+    
     private float baseSpeed;
-    
-    
-    
-    private void Start() 
+
+    public float SpeedEffector { get; set; }
+    public float Offset { get; set; } = 0;
+
+    public PlayerCarController(float speedEffector)
+     {
+         this.SpeedEffector = speedEffector;
+     }
+
+     private void Start() 
     {
         position = transform.position;
         baseSpeed = speed;
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
     }
 
     private void Update()
@@ -39,22 +50,22 @@ public class PlayerCarController : MonoBehaviour
 
             transform.position = position;
 
-            if (GasPedal.IsPressed && offset <= offsetLimit)
+            if (GasPedal.IsPressed && Offset <= offsetLimit)
             {
                 speed = baseSpeed + acceleration;
-                offset += acceleration * Time.deltaTime;
+                Offset += acceleration * Time.deltaTime;
             }
-            else if (BreakPedal.IsPressed && offset >= -offsetLimit)
+            else if (BreakPedal.IsPressed && Offset >= -offsetLimit)
             {
                 speed = baseSpeed - acceleration;
-                offset -= acceleration * Time.deltaTime;
+                Offset -= acceleration * Time.deltaTime;
             }
             else
             {
                 speed = baseSpeed;
             }
 
-            speed += speedAffector;
+            speed += SpeedEffector;
         }
     }
 }
