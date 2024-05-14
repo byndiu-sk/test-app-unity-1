@@ -13,6 +13,17 @@ public class Obstacle : MonoBehaviour
     }
 
     public float Deceleration => _deceleration;
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        ShieldBoostItem shield = other.gameObject.GetComponent<ShieldBoostItem>();
+        
+        if (shield != null)
+        {
+            print("shield was activated");
+            Destroy(gameObject);
+        }
+    }
 }
 
 

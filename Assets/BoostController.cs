@@ -26,17 +26,18 @@ public class BoostController : MonoBehaviour
             _boosts.ForEach(b => b.gameObject.SetActive(false));
             
             var boost = _boosts.Find(b => b.Type == item.Type);
+            if (_currentBoost != null)
+            {
+                CancelBoost();
+            }
             if (boost != null)
                 boost.gameObject.SetActive(true);
             
             TemporaryBoostItem newBoost = newItem as TemporaryBoostItem;
-            if (_currentBoost != null)
-            {
-                // Has a current boost, remove it
-                CancelBoost();
-            }
-
-            // Apply new boost
+            // if (_currentBoost != null)
+            // {
+            //     CancelBoost();
+            // }
             newBoost.Apply(_player);
             _currentBoost = newBoost;
             
@@ -65,24 +66,4 @@ public class BoostController : MonoBehaviour
             _currentBoost = null;
         }
     }
-    
-    private void ActivateMagnetBoost()
-    {
-        // Code to activate magnet boost
-    }
-    private void ActivateShieldBoost()
-    {
-        // Code to activate shield boost
-    }
-    private void ActivateNitroBoost()
-    {
-        
-    }
-
-    private void ActivateHealthBoost(HealthItem item)
-    {
-        _player.HealthSystem.Heal(item.HP);
-
-    }
-    
 }

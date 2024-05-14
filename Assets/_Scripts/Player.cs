@@ -12,13 +12,16 @@ public class Player : MonoBehaviour
 
     public PlayerCarController PlayerCar => _playerCar;
     public HealthSystem HealthSystem => _healthSystem;
-    
+
+
+    private ShieldBoostItem _shield;
 
     private void Awake()
     {
         _healthSystem = GetComponent<HealthSystem>();
         _boostController = GetComponent<BoostController>();
         _playerCar = GetComponentInChildren<PlayerCarController>();
+        _shield = GetComponentInChildren<ShieldBoostItem>();
     }
 
     private void Start()
@@ -31,13 +34,14 @@ public class Player : MonoBehaviour
         print("triggered");
         Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
         Boost boostItem = other.gameObject.GetComponent<Boost>();
-
-        if (obstacle != null)
+        ShieldBoostItem shield = GetComponentInChildren<ShieldBoostItem>();
+    
+        if (obstacle != null && shield == null)
         {
             _healthSystem.Damage(obstacle.HitDamage);
             StartCoroutine(SlowDownPlayer(obstacle));
         }
-
+    
         if (boostItem != null)
         {
             ActivateItem(boostItem);

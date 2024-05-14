@@ -9,6 +9,8 @@ public abstract class TemporaryBoostItem : BoostItem
     private bool _isActive = false;
     
     public float Duration => _duration;
+
+    public bool IsActive => _isActive;
     
     void Update()
     {
