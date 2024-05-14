@@ -16,10 +16,8 @@ public class MagnetItem : TemporaryBoostItem
         {
             if(obj.TryGetComponent(out CoinBoost coin))
             {
-                Vector2 direction = (Vector2)coin.transform.position - (Vector2)transform.position;
-                direction.Normalize();
-
-                coin.GetComponent<Rigidbody2D>().AddForce(-direction * _strength);
+                float step = _strength * Time.deltaTime;
+            coin.transform.position = Vector2.MoveTowards(coin.transform.position, transform.position, step);
             }
         }
     }
