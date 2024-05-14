@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6658047a031cbd04ea9b7a609ed5d435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnRange: 30
+  _spawnRange: 15
   _roadPrefabs:
   - {fileID: 3783162992504053576, guid: 2971f7d3167ab9846a9965bd8fb1ec01, type: 3}
   - {fileID: 3246077639262070474, guid: 92063a20245cc884d9e6c1225b0543cc, type: 3}

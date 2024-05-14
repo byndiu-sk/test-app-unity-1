@@ -37,7 +37,7 @@ public class PoliceCarController : MonoBehaviour
     
     public void Init()
     {
-        _speed = _target.GetSpeed();
+        _speed = _target.speed;
     }
     
     private void Update()

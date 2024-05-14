@@ -10,32 +10,20 @@ public class PlayerCarController : MonoBehaviour
     [SerializeField] private BreakPedal BreakPedal;
     [SerializeField] private GasPedal GasPedal;
     [SerializeField] private SteeringWheel SteeringWheel;
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private float acceleration;
-    [SerializeField] private float rotationSpeed = 50f;
-    
+    public float speed = 10f;
+    public float speedEffector;
+    public float acceleration;
+    public float rotationSpeed = 50f;
     private Vector3 position;
     private float horizontalInput;
-    
+
+    public float offset = 0;
     private float baseSpeed;
 
-    public float SpeedEffector { get; set; }
-    public float Offset { get; set; } = 0;
-
-    public PlayerCarController(float speedEffector)
-     {
-         this.SpeedEffector = speedEffector;
-     }
-
-     private void Start() 
+    private void Start() 
     {
         position = transform.position;
         baseSpeed = speed;
-    }
-
-    public float GetSpeed()
-    {
-        return speed;
     }
 
     private void Update()
@@ -47,25 +35,27 @@ public class PlayerCarController : MonoBehaviour
 
             horizontalInput = SteeringWheel.GetClampedValue();
             position.x += horizontalInput * rotationSpeed * Time.deltaTime;
+            
+            position.x = Mathf.Clamp(position.x, -borderLimit, borderLimit);
 
             transform.position = position;
 
-            if (GasPedal.IsPressed && Offset <= offsetLimit)
+            if (GasPedal.IsPressed && offset <= offsetLimit)
             {
                 speed = baseSpeed + acceleration;
-                Offset += acceleration * Time.deltaTime;
+                offset += acceleration * Time.deltaTime;
             }
-            else if (BreakPedal.IsPressed && Offset >= -offsetLimit)
+            else if (BreakPedal.IsPressed && offset >= -offsetLimit)
             {
                 speed = baseSpeed - acceleration;
-                Offset -= acceleration * Time.deltaTime;
+                offset -= acceleration * Time.deltaTime;
             }
             else
             {
                 speed = baseSpeed;
             }
 
-            speed += SpeedEffector;
+            speed += speedEffector;
         }
     }
 }

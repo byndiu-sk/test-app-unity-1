@@ -66,8 +66,8 @@ public class Player : MonoBehaviour
 
     public IEnumerator SlowDownPlayer(Obstacle obstacle)
     {
-        _playerCar.SpeedEffector -= obstacle.Deceleration;
+        _playerCar.speedEffector -= obstacle.Deceleration;
         yield return new WaitForSeconds(10);
-        _playerCar.SpeedEffector += obstacle.Deceleration;
+        _playerCar.speedEffector += obstacle.Deceleration;
     }
 }
