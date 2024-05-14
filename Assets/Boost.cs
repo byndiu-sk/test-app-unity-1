@@ -9,7 +9,7 @@ public class Boost : MonoBehaviour
 
     public BoostType Type => _type;
 
-    public void Pickup()
+    public virtual void Pickup()
     {
         gameObject.SetActive(false);
     }

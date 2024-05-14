@@ -52,6 +52,11 @@ public class ScoreManager : MonoBehaviour
         _score = 0;
     }
 
+    public void AddScore(float value)
+    {
+        _score += value;
+    }
+
     public float CurrentScore()
     {
         return _score;

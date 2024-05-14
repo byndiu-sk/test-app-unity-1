@@ -3,5 +3,6 @@
     Magnet,
     Shield,
     Nitro,
-    Health
+    Health,
+    Coin
 }
