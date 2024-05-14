@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class RoadSpawner : MonoBehaviour
 {
+    public GameObject startingSegmentPrefab; // This is the prefab for the starting road segment
     public List<GameObject> roadSegmentPrefabs; // This is the list of prefabs for road segments
     public int numberOfSegments; // The number of road segments you want to spawn
     public float spawnY; // The Y-coordinate where the first segment of the road is spawned
@@ -13,10 +14,22 @@ public class RoadSpawner : MonoBehaviour
     // This function is called in the Start function and spawns a given number of road segments
     public void Start()
     {
-        for (int i = 0; i < numberOfSegments; i++)
+        SpawnStartingSegment(); // spawn starting segment first
+
+        for (int i = 1; i < numberOfSegments; i++)  // i starts from 1 because starting segment is already spawned
         {
             SpawnRoadSegment();
         }
+    }
+
+    private void SpawnStartingSegment()
+    {
+        GameObject segment = Instantiate(startingSegmentPrefab);
+        segment.transform.SetParent(transform);
+        segment.transform.position = new Vector3(0, spawnY, 0);
+        spawnY += segmentLength;
+
+        roadSegments.Add(segment);
     }
 
     // This function is used to spawn a road segment

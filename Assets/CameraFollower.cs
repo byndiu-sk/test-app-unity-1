@@ -9,6 +9,7 @@ public class CameraFollower : MonoBehaviour
     public Transform target;
     [FormerlySerializedAs("CarController")] public PlayerCarController playerCarController;
 
+    
     private void Update()
     {
         var currentPosition = gameObject.transform.position;

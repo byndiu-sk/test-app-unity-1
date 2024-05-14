@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.ComponentModel;
 using TMPro;
 using UnityEngine;
@@ -21,7 +22,7 @@ public class GameController : MonoBehaviour
     public UIController UIController => _uiController;
     
     public Player Player => _player;
-
+    
     public Action OnGameStart;
     public Action OnGameFinish;
 
@@ -52,6 +53,7 @@ public class GameController : MonoBehaviour
     
     public void LaunchGame()
     {
+        InvokeRepeating("SpawnPoliceCar", 0f, 60f);
         OnGameStart?.Invoke();
     }
     
@@ -73,8 +75,8 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void Reset()
+    private void OnDisable()
     {
-        
+        StopAllCoroutines();
     }
 }
